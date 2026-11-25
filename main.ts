@@ -1,7 +1,5 @@
-import * as fs from "node:fs";
+// One-line horror: the baby monitor speaks in a voice that should no longer exist.
+import { mkdirSync, writeFileSync } from "node:fs";
 
-const entry = "The voicemail from my own number says I sound tired, and I have not slept since the night it was recorded.";
-
-fs.mkdirSync("/output", {recursive: true});
-fs.writeFileSync("/output/entry.txt", entry, "utf8");
-console.log("wrote /output/entry.txt (" + entry.length + " chars)");
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", "The baby monitor whispered my name in my mother's voice, and my mother died three years ago.");
